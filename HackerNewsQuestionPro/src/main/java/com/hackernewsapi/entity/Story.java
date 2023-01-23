@@ -1,12 +1,26 @@
-package com.hackernews.entity;
+package com.hackernewsapi.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class Story {
 
+	@Id
+	@Column
 	private int id;
+	@Column
 	private String title;
+	@Column
 	private String url;
+	@Column
 	private int score;
+	@Column
 	private Long time;
+	@Column
 	private String by;
 	
 	public Story() {
@@ -69,11 +83,6 @@ public class Story {
 
 	public void setBy(String by) {
 		this.by = by;
-	}
-
-	@Override
-	public String toString() {
-		return "Story [id=\" + id + \"title=" + title + ", url=" + url + ", score=" + score + ", time=" + time + ", by=" + by + "]";
 	}
 
 }

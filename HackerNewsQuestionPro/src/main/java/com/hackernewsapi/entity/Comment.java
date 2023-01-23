@@ -1,24 +1,37 @@
-package com.hackernews.entity;
+package com.hackernewsapi.entity;
 
 import java.util.List;
 
-import com.hackernews.typeenum.ItemType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table
 public class Comment {
 
+	@Column
 	private String by;
+	@Id
+	@Column
 	private int id;
+	@Column
 	private List<Integer> kids;
+	@Column
 	private int parent;
+	@Column
 	private String text;
+	@Column
 	private Long time;
-	private ItemType type;
+	@Column
+	private String type;
 	
 	public Comment() {
 		super();
 	}
 
-	public Comment(String by, int id, List<Integer> kids, int parent, String text, Long time, ItemType type) {
+	public Comment(String by, int id, List<Integer> kids, int parent, String text, Long time, String type) {
 		super();
 		this.by = by;
 		this.id = id;
@@ -77,18 +90,12 @@ public class Comment {
 		this.time = time;
 	}
 
-	public ItemType getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(ItemType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
-		return "Comment [by=" + by + ", id=" + id + ", kids=" + kids + ", parent=" + parent + ", text=" + text
-				+ ", time=" + time + ", type=" + type + "]";
-	}
-	
 }

@@ -8,11 +8,11 @@
 		<version>3.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.hackernews</groupId>
-	<artifactId>HackerNews</artifactId>
+	<groupId>com.hackernewsapi</groupId>
+	<artifactId>HackerNewsQuestionPro</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>HackerNews</name>
-	<description>HackerNews</description>
+	<name>HackerNewsQuestionPro</name>
+	<description>Hacker News QuestionPro</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -60,11 +60,10 @@
 			<scope>test</scope>
 		</dependency>
 		
-		  <dependency>  
+		<dependency>  
             <groupId>org.springframework.boot</groupId>  
             <artifactId>spring-boot-starter-cache</artifactId>  
         </dependency>  
-        
 	</dependencies>
 
 	<build>
